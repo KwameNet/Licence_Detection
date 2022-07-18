@@ -280,6 +280,7 @@ class ScaleJitter(nn.Module):
     """Randomly resizes the image and its bounding boxes  within the specified scale range.
     The class implements the Scale Jitter augmentation as described in the paper
     `"Simple Copy-Paste is a Strong Data Augmentation Method for Instance Segmentation" <https://arxiv.org/abs/2012.07177>`_.
+
     Args:
         target_size (tuple of ints): The target size for the transform provided in (height, weight) format.
         scale_range (tuple of ints): scaling factor interval, e.g (a, b), then scale is randomly sampled from the

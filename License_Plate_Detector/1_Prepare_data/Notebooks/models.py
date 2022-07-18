@@ -68,14 +68,15 @@ class Net(nn.Module):
         self.activated_4x = F.relu(self.conv_4bnx)
         self.drop_4x = self.conv2_drop(self.activated_4x)
         self.pooled_4x = self.pool_2(self.drop_4x)
+        
         #x = self.pool_2(F.relu(self.conv4_bn(self.conv4(x))))
         
         self.conv_5x = self.conv5(self.pooled_4x)
         self.activated_5x = F.relu(self.conv_5x)
-        self.drop_5x = self.conv2_drop(self.activated_5x)
-        self.pooled_5x = self.pool_2(self.drop_5x)
+        #self.drop_5x = self.conv2_drop(self.activated_5x)
+        #self.pooled_5x = self.pool_2(self.drop_5x)
         #x = self.pool_2(self.conv2_drop(F.relu(self.conv5(x))))
-        
+        x = self.activated_5x
         
         #x = self.conv2_drop(F.relu(self.conv2(x)))
         #x = self.pool_2(x)
